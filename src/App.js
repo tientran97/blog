@@ -4,6 +4,9 @@ import { Provider } from "react-redux";
 
 import Error404 from "containers/errors/Error404";
 import Home from "containers/pages/Home";
+import OurStory from "containers/pages/OurStory";
+import Blog from "containers/pages/Blog";
+import Write from "containers/pages/Write";
 
 function App() {
   return (
@@ -14,6 +17,10 @@ function App() {
           <Route path="*" element={<Error404 />} />
 
           {/* Home Display */}
+          <Route path="/our-story" element={<OurStory />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/write" element={<Write />} />
+          <Route path="/" element={<Home />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>
